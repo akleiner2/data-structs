@@ -6,13 +6,21 @@
 /* The node of a linked-list.*/ 
 typedef struct __node__ { 
  	int val; 
- 	struct __node__ next*; 
+ 	struct __node__ * next; 
  } node_t; 
 
 typedef struct __list__ { 
-	struct __node__ head*; 
+	struct __node__ * head; 
 	int size; 
 } list_t;
+
+/*
+ * PRIVATE: Returns the head of the list
+ * @param list_t* list - the list object
+ * @return node_t* - the head node
+ */
+node_t* get_head(list_t* list);
+
 
 /*
  *  Allocates appropriate memory for the list. 
@@ -51,7 +59,7 @@ node_t* remove_at_index(list_t * list, int index);
  * @param list_t* list - the list object
  * @return the size of the list
  */
-int list_size(list_t * list);
+int get_size(list_t * list);
 
 /* 
  * Prints out the list in the following format: 
