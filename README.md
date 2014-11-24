@@ -1,13 +1,13 @@
 # Data-Structs
 
-C-implementation of common data-structures and algorithms. This is mostly just practice for implementing data the data structures, as well as practice with the C language and syntax. 
+C-implementation of common data-structures and algorithms. This is mostly just practice for implementing various data structures and algorithms with C language and syntax. 
 
 The planned list of data structures to be included: 
 * Linked Lists
 * Stacks
 * Queues
 * Binary Search Trees
-* DFS/BFS across graphs
+* DFS/BFS 
 * ...and more!
 
 ## Contributing 
