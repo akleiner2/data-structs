@@ -10,6 +10,6 @@ The planned list of data structures to be included:
 * DFS/BFS across graphs
 * ...and more!
 
-## Contributing ## 
-If you want to contribute to this repository, just fork it and make a pull request. There's a lot to be done with it, so I would be more than happy to have contributors! :) 
+## Contributing 
+If you want to contribute to this repository, just make a pull request. There's a lot to be done with it, so I would be more than happy to have contributors! :) 
 
