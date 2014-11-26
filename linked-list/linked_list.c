@@ -2,6 +2,17 @@
 #include <stdio.h>
 #include "linked_list.h"
 
+//PRIVATE
+node_t* get_head(list_t* list){ 
+	return list->head; 
+}
+
+
+//PRIVATE
+int get_size(list_t* list) { 
+	return list->size;
+}
+
 void list_init(list_t* list) { 
 	head = NULL; 
  	size = 0;
@@ -14,20 +25,11 @@ void list_destroy(list_t* list) {
 		count++; 
 	}
 }
-//PRIVATE
-int get_size(list_t* list) { 
-	return list->size;
-}
 
 int is_empty(list_t* list) { 
 	return get_size(list) == 0 ? 1 : 0;
 }
 
-
-//PRIVATE
-node_t* get_head(list_t* list){ 
-	return list->head; 
-}
 
 node_t * remove_at_index(list_t* list, int i) { 
 	if (i > size(list)) return NULL; 
@@ -57,7 +59,7 @@ void print_list(list_t* list){
 
 }
 
-// 8 -> 2 -> 5 ; add(
+// 8 -> 2 -> 5 ; add(4, 1)
 void add_at_index(list_t* list, node_t* val, int i){
 	if (i > get_size(list)) return; 
 	node_t* head = get_head(list);
@@ -66,4 +68,7 @@ void add_at_index(list_t* list, node_t* val, int i){
 		index++; 
 		head = head->next;
 	}
+
+	val->next = head->next; 
+	head->next = val; 
 }
