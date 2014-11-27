@@ -14,8 +14,8 @@ int get_size(list_t* list) {
 }
 
 void list_init(list_t* list) { 
-	head = NULL; 
- 	size = 0;
+	list->head = NULL; 
+ 	list->size = 0;
 }
 
 void list_destroy(list_t* list) { 
@@ -32,7 +32,7 @@ int is_empty(list_t* list) {
 
 
 node_t * remove_at_index(list_t* list, int i) { 
-	if (i > size(list)) return NULL; 
+	if (i > get_size(list)) return NULL; 
 	// TODO: come back to this
 	node_t* temp = get_head(list);
 	int count = 0; 
