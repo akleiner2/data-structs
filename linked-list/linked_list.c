@@ -14,6 +14,7 @@ int get_size(list_t* list) {
 }
 
 void list_init(list_t* list) { 
+	list = malloc(sizeof(list_t));
 	list->head = NULL; 
  	list->size = 0;
 }
@@ -59,7 +60,7 @@ void print_list(list_t* list){
 
 }
 
-// 8 -> 2 -> 5 ; add(4, 1)
+// 8 -> 2 -> 5 ; add(4, 1); 8 -> 4 -> 2 -> 5
 void add_at_index(list_t* list, node_t* val, int i){
 	if (i > get_size(list)) return; 
 	node_t* head = get_head(list);
