@@ -20,7 +20,7 @@ int* stack_pop(stack* s);
 int* stack_peek(stack* s);
 // get stack size 
 int stack_size(stack* s);
-// update stack size 
+// update max stack size (realloc for array)
 int stack_update(stack* s);
 // free allocated memory from the stack 
 void stack_destroy(stack* s);
