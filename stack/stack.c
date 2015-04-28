@@ -6,7 +6,7 @@ void stack_init(stack* s) {
 	if (s == NULL) return; 
 	s->size = 0; 
 	s->max_size = 10; 
-	s->items = (s->max_size * sizeof(int*)); // allocate the dynamic array properly
+	s->items = malloc(s->max_size * sizeof(int*)); // allocate the dynamic array properly
 }
 
 // returns size of current stack 
@@ -15,11 +15,11 @@ int stack_size(stack* s) {
 }
 
 // push an item onto the stack 
-void stack_push(stack* s, int val) { 
+void stack_push(stack* s, int* val) { 
 	// if we've already reached our max size, resize the whole stack 
 	if (s->size == s->max_size) stack_update(s); 
 	int index = s->size; 
-	s->items[index] = &val; 
+	s->items[index] = val; 
 	// update the current size of the stack 
 	s->size++;
 } 

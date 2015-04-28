@@ -13,7 +13,7 @@ typedef struct __stack__{
 // initalize memory for the stack 
 void stack_init(stack* s);
 // push an item onto the stack  
-void stack_push(stack* s, int val);
+void stack_push(stack* s, int* val);
 // pop an item off of the stack 
 int* stack_pop(stack* s); 
 // look at the top of stack without popping 
@@ -21,7 +21,7 @@ int* stack_peek(stack* s);
 // get stack size 
 int stack_size(stack* s);
 // update max stack size (realloc for array)
-int stack_update(stack* s);
+void stack_update(stack* s);
 // free allocated memory from the stack 
 void stack_destroy(stack* s);
 
